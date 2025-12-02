@@ -1,6 +1,6 @@
 <div class="top-menu">
 
-    <img class="logo"
+    <img class="logo" alt="logo"
          src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
 
 </div>
@@ -10,14 +10,18 @@
   @for (course of courses; track course.id;
     let index = $index;
     let count = $count;
-    let first = $first;
-    let last = $last) {
+    // let first = $first;
+    let last = $last;
+    let even = $even;
+    //let odd = $odd;) {
 
     <course-card
       [course]="course"
       [index]="index"
-      [clas.is-first] = "first"
-      [clas.is-last] = "last"
+      [class.is-first] = $first
+      [class.is-last] = last
+      [class.is-even] = "even"
+      [class.is-odd] = $odd
       (courseSelected)="onCourseSelected($event)"/>
   }
   @empty {
