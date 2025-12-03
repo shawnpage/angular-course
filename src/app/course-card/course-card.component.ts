@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {COURSES} from '../../db-data';
+//import {COURSES} from '../../db-data';
 import {Course} from '../model/course';
 // import EventEmitter from 'node:events';
 
@@ -17,12 +17,12 @@ export class CourseCardComponent implements OnInit{
   @Input({
     required: true
   })
-  course:Course;
+  course!:Course;
 
   @Input({
     required: true,
   })
-  index: number;
+  index!: number;
 
   @Output('courseSelected')
   courseEmitter = new EventEmitter<Course>();
