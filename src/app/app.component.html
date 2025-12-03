@@ -7,13 +7,13 @@
 
 <div class="courses">
 
+  <!-- @for (course of courses; track trackCourse; -->
+
   @for (course of courses; track course.id;
     let index = $index;
-    //let count = $count;
-    // let first = $first;
     let last = $last;
     let even = $even;
-    //let odd = $odd;) {
+    ) {
 
     <course-card
       [course]="course"
