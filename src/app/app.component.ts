@@ -10,7 +10,6 @@ import {Course} from './model/course';
 })
 export class AppComponent {
 
-  // courses = COURSES;
   courses = [...COURSES];
 
   onCourseSelected(course: Course) {
@@ -18,7 +17,7 @@ export class AppComponent {
     console.log('App component - click event bubbled...', course);
   }
 
-  trackCourse(_index: number, course: Course) {
-    return course.id;
-  }
+  // trackCourse(_index: number, course: Course) {
+  //   return course.id;
+  // }
 }

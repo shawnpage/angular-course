@@ -20,6 +20,11 @@ export class CourseCardComponent implements OnInit{
   course!:Course;
 
   @Input({
+    required: true
+  })
+  cardIndex!: number;
+
+  @Input({
     required: true,
   })
   index!: number;
